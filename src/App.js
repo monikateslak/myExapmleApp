@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './Navigation'
 import Header from './Header'
 import MainSection from './Main'
+import Fetch from './FetchApi'
+import FetchItems from './FetchItems'
 
 const Home = () => <div>Home</div>
 const About = () => <div>About</div>
@@ -20,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Fetch></Fetch>
         <Navigation></Navigation>
         <Header></Header>
         <main>
@@ -27,6 +30,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home></Home>}></Route>
               <Route path="/about" element={<About></About>}></Route>
+              <Route path="/fetch" element={Fetch}></Route>
+              <Route path="/fetch/:id" element={FetchItems}></Route>
               <Route path="/user" element={<User></User>}></Route>
               <Route path="/myapp" element={<MyApp></MyApp>}></Route>
               <Route path="/shop" element={<Shop></Shop>}></Route>
