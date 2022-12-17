@@ -1,4 +1,5 @@
 import React from 'react'
+import Images from './Images'
 
 function MainSection() {
   return (
@@ -6,7 +7,9 @@ function MainSection() {
     <div className='wrapper'></div>
       <h3>Main Section</h3>
       <div className="container">
-        <div className="one">oneoneone</div>
+        <Images></Images>
+        <div className="one">oneoneone
+        </div>
         <div className="two">twotwotwo</div>
         <div className="three">threethreethree</div>
         <div className="four">fourfourfour</div>

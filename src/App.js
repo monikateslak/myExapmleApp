@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './Navigation'
 import Header from './Header'
 import MainSection from './Main'
+import GetData from './GetData'
 
 const Home = () => <div>Home</div>
 const About = () => <div>About</div>
@@ -19,7 +20,9 @@ const Join = () => <div>Join</div>
 function App() {
   return (
     <div className="App">
+      <MainSection></MainSection>
       <header className="App-header">
+        <GetData></GetData>
         <Navigation></Navigation>
         <Header></Header>
         <main>
@@ -35,7 +38,7 @@ function App() {
               <Route path="/join" element={<Join></Join>}></Route>
             </Routes>
           </Router>
-          <MainSection></MainSection>
+          
         </main>
       </header>
     </div>
